@@ -113,7 +113,7 @@ This framework combines three powerful approaches for comprehensive perturbation
 
 ```bash
 # Clone the repository
-git clone https://github.com/manus-ai/bridge.git
+git clone https://github.com/Manarai-ai/bridge.git
 cd bridge
 
 # Install in development mode
@@ -279,17 +279,17 @@ If you use BRIDGE in your research, please cite:
 ```bibtex
 @software{bridge2025,
   title={BRIDGE: Biological Regulatory Integration for Dynamic Gene Expression},
-  author={Manus AI},
+  author={Manarai},
   year={2025},
-  url={https://github.com/manus-ai/bridge}
+  url={https://github.com/Manarai-ai/bridge}
 }
 ```
 
 ## Support
 
 - **Documentation**: [https://bridge-omics.readthedocs.io/](https://bridge-omics.readthedocs.io/)
-- **Issues**: [GitHub Issues](https://github.com/manus-ai/bridge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/manus-ai/bridge/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Manarai-ai/bridge/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Manarai-ai/bridge/discussions)
 
 
 <img width="462" height="642" alt="image" src="https://github.com/user-attachments/assets/8017d5b8-193d-48dd-b839-73aa3240e3f6" />
