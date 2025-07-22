@@ -1,67 +1,102 @@
 # BRIDGE: Biological Regulatory Integration for Dynamic Gene Expression
 
-A comprehensive Python framework for integrating SCENIC+ enhancer-driven gene regulatory networks with PINNACLE context-specific protein embeddings to enable multi-omic network analysis quantifiable across conditions.
+**BRIDGE** is a cutting-edge computational framework that integrates SCENIC+ enhancer-driven gene regulatory networks with PINNACLE context-specific protein embeddings, enhanced with **RNA velocity analysis** to detect and quantify network perturbations in drug response and experimental conditions through splicing dynamics.
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Documentation Status](https://readthedocs.org/projects/bridge-omics/badge/?version=latest)](https://bridge-omics.readthedocs.io/en/latest/?badge=latest)
 
+## üéØ **Core Innovation: Velocity-Guided Perturbation Detection**
+
+BRIDGE leverages **RNA velocity** (velocyto/scVelo) to detect network perturbations by analyzing splicing dynamics and transcriptional kinetics. This enables unprecedented sensitivity in identifying how drugs, treatments, or experimental perturbations alter regulatory networks at the molecular level.
+
+### **Key Breakthrough: Splicing-Based Perturbation Mapping**
+- **Detect Early Perturbations**: Identify network changes before steady-state expression changes
+- **Splicing Event Analysis**: Use unspliced/spliced RNA ratios to detect transcriptional perturbations  
+- **Real-Time Network Dynamics**: Track how regulatory networks respond to perturbations in real-time
+- **Perturbation Sensitivity**: Detect subtle network changes invisible to traditional expression analysis
+
 ## Overview
 
-This framework bridges two powerful single-cell analysis methods:
+This framework combines three powerful approaches for comprehensive perturbation analysis:
 
-- **SCENIC+**: Reconstructs enhancer-driven gene regulatory networks (eGRNs) by integrating single-cell chromatin accessibility and gene expression data
-- **PINNACLE**: Generates context-specific protein embeddings by integrating transcriptomics, protein-protein interaction networks, and cellular context
+- **SCENIC+**: Reconstructs enhancer-driven gene regulatory networks from single-cell multi-omics data
+- **PINNACLE**: Generates context-specific protein embeddings integrating multiple data modalities
+- **RNA Velocity**: Analyzes splicing dynamics to detect transcriptional perturbations and network changes
 
-By combining these approaches, researchers can:
-- Map mechanistic regulatory pathways from enhancers to proteins
-- Quantify network changes across biological conditions
-- Identify condition-specific regulatory and protein interaction patterns
-- Generate comprehensive multi-scale biological insights
+**Unique Capability**: By integrating RNA velocity with network analysis, BRIDGE can pinpoint which regulatory networks are perturbed by drugs or experimental conditions through analysis of splicing short events, providing early detection of perturbations before they manifest in steady-state expression changes.
 
-## 🚀 Enhanced Capabilities
+## üöÄ **Perturbation Detection Capabilities**
 
-### **scVI Integration**
-- **Denoised Expression**: Improved input quality for SCENIC+ regulatory network inference
-- **Robust Latent Space**: Enhanced protein embedding context for PINNACLE
-- **Batch Correction**: Handle technical variation across experimental conditions
-- **Multi-modal Analysis**: Joint RNA+ATAC modeling with totalVI/MultiVI
-- **Better Peak-Gene Links**: Enhanced enhancer-gene associations
+### **RNA Velocity-Driven Perturbation Analysis**
+- **Splicing Dynamics Monitoring**: Track unspliced/spliced RNA ratios to detect transcriptional perturbations
+- **Early Perturbation Detection**: Identify network changes hours before steady-state expression changes
+- **Drug Response Mapping**: Pinpoint which regulatory networks are affected by drug treatments
+- **Condition Perturbation Profiling**: Detect network alterations across experimental conditions
+- **Temporal Perturbation Tracking**: Monitor how perturbations propagate through networks over time
+- **Dose-Response Perturbation Analysis**: Quantify network sensitivity to perturbation strength
 
-### **RNA Velocity Integration**
-- **Dynamic Network Analysis**: Track regulatory network evolution with RNA velocity
-- **Drug Response Trajectories**: Map how networks change in response to drug treatments
-- **Perturbed Pathway Identification**: Detect regulatory modules affected by perturbations
-- **Pharmacological Profiling**: Comprehensive drug target discovery and prioritization
-- **Temporal Analysis**: Monitor network dynamics across time points and conditions
-- **Dose-Response Modeling**: Quantify network changes across drug concentration gradients
+### **Network Perturbation Quantification**
+- **Velocity-Network Correlations**: Link transcriptional dynamics to regulatory network structure
+- **Perturbed Module Identification**: Isolate specific regulatory modules affected by perturbations
+- **Perturbation Propagation Analysis**: Track how perturbations spread through network hierarchies
+- **Cross-Modal Perturbation Effects**: Analyze perturbation effects on both regulatory and protein networks
+- **Perturbation Signature Discovery**: Identify characteristic patterns of network perturbation
 
-### **Optimal Transport (OT)**
-- **Cross-Modal Alignment**: Principled alignment between regulatory networks and protein embeddings
-- **Condition Comparison**: Quantify network changes using Wasserstein distances
-- **Batch Integration**: Remove technical effects while preserving biological signal
-- **Trajectory Analysis**: Track regulatory network evolution across conditions/time
-- **Structure-Aware Matching**: Gromov-Wasserstein for topology-preserving alignment
+### **Supporting Technologies**
 
-### 🔬 **Multi-Omic Integration**
-- Seamless integration of regulatory networks and protein embeddings
+#### **scVI Integration**
+- **Denoised Expression**: Improved input quality for perturbation-sensitive network inference
+- **Batch Correction**: Remove technical variation to enhance perturbation signal detection
+- **Multi-modal Analysis**: Joint RNA+ATAC modeling for comprehensive perturbation analysis
+
+#### **Optimal Transport (OT)**
+- **Perturbation Trajectory Analysis**: Map perturbation paths through network space using Wasserstein distances
+- **Cross-Condition Alignment**: Align networks across perturbation conditions for comparison
+- **Perturbation Quantification**: Measure perturbation strength using optimal transport metrics
+
+## üéØ **Applications: Perturbation-Driven Discovery**
+
+### **Drug Discovery & Development**
+- **Early Drug Response Detection**: Identify drug effects through splicing dynamics before expression changes
+- **Drug Target Validation**: Pinpoint which networks are perturbed by drug candidates
+- **Off-Target Effect Detection**: Discover unintended network perturbations causing side effects
+- **Dose-Response Optimization**: Determine optimal drug concentrations for network perturbation
+- **Drug Resistance Mechanisms**: Identify network adaptations that lead to treatment resistance
+
+### **Experimental Perturbation Studies**
+- **Genetic Perturbation Analysis**: Detect network changes from CRISPR/RNAi experiments
+- **Environmental Stress Response**: Identify perturbed networks in response to stress conditions
+- **Developmental Perturbations**: Track network changes during perturbed development
+- **Disease Progression Monitoring**: Detect network perturbations in disease models
+- **Treatment Response Prediction**: Predict therapeutic outcomes based on network perturbation patterns
+
+### **Precision Medicine Applications**
+- **Patient Stratification**: Group patients based on network perturbation signatures
+- **Biomarker Discovery**: Identify splicing-based biomarkers for drug response
+- **Personalized Treatment**: Tailor therapies based on individual network perturbation profiles
+- **Resistance Prediction**: Forecast treatment resistance through network perturbation analysis
+
+### üî¨ **Technical Features**
 - Support for multiple data formats (pickle, CSV, HDF5, NPZ)
 - Automated identifier mapping between genes and proteins
 - Quality control and validation at each integration step
 
-### 📊 **Differential Analysis**
-- Quantitative comparison of networks across conditions
-- Statistical testing for regulatory and protein changes
-- Module-based analysis for functional interpretation
-- Comprehensive summary statistics and effect sizes
+### üìä **Perturbation Analysis & Quantification**
+- **Velocity-Based Perturbation Scoring**: Quantify perturbation strength using RNA velocity metrics
+- **Splicing Event Statistical Testing**: Statistical analysis of unspliced/spliced ratio changes
+- **Network Perturbation Significance**: Test for significant changes in regulatory network structure
+- **Temporal Perturbation Profiling**: Track perturbation dynamics over time courses
+- **Multi-Modal Perturbation Integration**: Combine regulatory and protein network perturbation signals
 
-### 🎨 **Rich Visualizations**
-- Interactive and static network visualizations
-- Heatmaps, volcano plots, and embedding projections
-- Publication-ready figures with customizable styling
-- Support for both matplotlib and plotly backends
+### üé® **Perturbation Visualization**
+- **Velocity Vector Plots**: Visualize RNA velocity vectors overlaid on network structures
+- **Perturbation Heatmaps**: Show perturbation strength across genes and conditions
+- **Network Perturbation Graphs**: Highlight perturbed edges and nodes in network visualizations
+- **Temporal Perturbation Trajectories**: Track perturbation propagation through time
+- **Splicing Dynamics Plots**: Visualize unspliced/spliced ratios and velocity magnitudes
 
-### ⚡ **Scalable Architecture**
+### ‚ö° **Scalable Architecture**
 - Modular design for easy extension and customization
 - Efficient processing of large-scale single-cell datasets
 - Parallel processing capabilities for multiple conditions
@@ -101,497 +136,161 @@ pip install plotly umap-learn
 pip install pytest black flake8 mypy
 ```
 
-## Quick Start
+## Quick Start: Perturbation Detection
 
-### Basic Usage
-
-```python
-from bridge import BridgeIntegrator
-
-# Initialize integrator with configuration
-config = {
-    'scenic': {'min_regulon_size': 10, 'importance_threshold': 0.1},
-    'pinnacle': {'normalize_embeddings': True},
-    'integration': {'similarity_threshold': 0.5}
-}
-
-integrator = BridgeIntegrator(config=config)
-
-# Load data
-integrator.load_scenic_data('scenic_networks.pkl')
-integrator.load_pinnacle_data('pinnacle_embeddings.pkl')
-
-# Integrate networks
-integrated_networks = integrator.integrate_networks()
-
-# Perform differential analysis
-diff_results = integrator.differential_analysis('condition1', 'condition2')
-
-# Generate visualizations
-integrator.visualize_networks('condition1', 'output_dir/')
-
-# Export results
-integrator.export_results('results/### Enhanced Usage with scVI and Optimal Transport
+### Velocity-Enhanced Perturbation Analysis
 
 ```python
-from bridge import ScviEnhancedBridge, OTEnhancedBridge
+from bridge import VelocityEnhancedBridge
 import scanpy as sc
-import anndata
 
-# Load your single-cell data
-rna_adata = sc.read_h5ad('rna_data.h5ad')
-atac_adata = sc.read_h5ad('atac_data.h5ad')
+# Load your single-cell data with spliced/unspliced counts
+adata = sc.read_h5ad('drug_treatment_data.h5ad')  # Must contain 'spliced' and 'unspliced' layers
 
-# Option 1: scVI-Enhanced BRIDGE
-scvi_config = {
-    'scvi': {
-        'n_latent': 30,
-        'max_epochs': 400,
-        'use_gpu': True
+# Initialize BRIDGE with velocity-based perturbation detection
+velocity_bridge = VelocityEnhancedBridge(config={
+    'velocity': {
+        'mode': 'dynamical',  # Use dynamical model for perturbation sensitivity
+        'n_top_genes': 2000,
+        'min_shared_counts': 20
     },
     'bridge': {
         'scenic': {'min_regulon_size': 10},
         'pinnacle': {'normalize_embeddings': True}
     }
-}
+})
 
-scvi_bridge = ScviEnhancedBridge(config=scvi_config)
-results = scvi_bridge.preprocess_and_integrate(
-    rna_adata=rna_adata,
-    atac_adata=atac_adata,
-    condition_key='condition',
-    batch_key='batch',
-    use_multimodal=True
+# Detect network perturbations from drug treatment
+results = velocity_bridge.analyze_drug_response_networks(
+    rna_adata=adata,
+    scenic_networks=scenic_networks,  # Your SCENIC+ networks
+    pinnacle_embeddings=pinnacle_embeddings,  # Your PINNACLE embeddings
+    drug_conditions=['drug_treatment'],
+    control_condition='control',
+    condition_key='condition'
 )
 
-# Option 2: Optimal Transport Enhanced BRIDGE
-ot_config = {
-    'optimal_transport': {
-        'reg': 0.1,
-        'method': 'fused_gromov_wasserstein',
-        'normalize': True
-    }
-}
+# Extract perturbed networks and targets
+perturbed_networks = results['drug_response_results']['drug_treatment']['perturbed_modules']
+drug_targets = results['pharmacological_targets']['drug_treatment']['top_targets']
 
-ot_bridge = OTEnhancedBridge(config=ot_config)
-ot_results = ot_bridge.integrate_with_ot_alignment(
-    scenic_networks=scenic_networks,
-    pinnacle_embeddings=pinnacle_embeddings,
-    gene_protein_mapping=gene_protein_mapping
+print(f"Detected {len(perturbed_networks['nodes_with_changes'])} perturbed genes")
+print(f"Top drug targets: {[target[0] for target in drug_targets[:5]]}")
+```
+
+### Splicing-Based Perturbation Detection
+
+```python
+from bridge.velocity_integration import VelocityNetworkAnalyzer
+
+# Initialize velocity analyzer for perturbation detection
+analyzer = VelocityNetworkAnalyzer(config={
+    'velocity': {'mode': 'dynamical'},
+    'network_dynamics': {'velocity_threshold': 0.1}
+})
+
+# Compute RNA velocity to detect transcriptional perturbations
+velocity_adata = analyzer.compute_rna_velocity(
+    adata, condition_key='treatment'
 )
 
-# Trajectory analysis with OT
-trajectory_results = ot_bridge.trajectory_analysis_with_ot(
-    scenic_networks=scenic_networks,
-    pinnacle_embeddings=pinnacle_embeddings,
-    condition_order=['healthy', 'disease', 'treatment'],
-    time_points=[0, 24, 48]
+# Analyze which networks are perturbed
+network_dynamics = analyzer.analyze_network_dynamics(
+    scenic_networks, velocity_adata, condition_key='treatment'
 )
-```a Requirements
 
-### SCENIC+ Data
-
-The framework accepts SCENIC+ regulatory networks in multiple formats:
-
-**Pickle Format** (Recommended):
-```python
-# Dictionary structure
-{
-    'condition1': networkx.DiGraph,
-    'condition2': networkx.DiGraph,
-    # ...
-}
+# Identify velocity-responsive modules (perturbed by treatment)
+for condition, dynamics in network_dynamics.items():
+    responsive_modules = dynamics['responsive_modules']
+    print(f"{condition}: {len(responsive_modules)} responsive modules detected")
+    
+    # Show velocity-network correlations
+    correlations = dynamics['velocity_network_correlations']
+    print(f"  Velocity-network correlation: {correlations.get('degree_velocity_corr', 0):.3f}")
 ```
 
-**CSV Format**:
-```csv
-TF,target,importance,enhancer
-TF1,Gene1,0.85,Enhancer_123
-TF1,Gene2,0.72,Enhancer_456
-# ...
+### Installation with Velocity Support
+
+```bash
+# Install with RNA velocity capabilities
+pip install bridge-omics[velocity]
+
+# Or install all features including velocity
+pip install bridge-omics[all]
+
+# Direct velocity dependencies
+pip install scvelo cellrank velocyto
 ```
 
-**AnnData Format**:
-- Regulatory networks stored in `adata.uns['regulons']`
-- Cell type information in `adata.obs['cell_type']`
+## Key Features for Perturbation Detection
 
-### PINNACLE Data
+### **Splicing Event Analysis**
+- **Unspliced/Spliced Ratio Monitoring**: Track changes in transcriptional dynamics
+- **Velocity Magnitude Analysis**: Quantify transcriptional activity changes
+- **Splicing Kinetics**: Analyze transcriptional and splicing rate changes
+- **Early Response Detection**: Identify perturbations before steady-state changes
 
-PINNACLE protein embeddings in supported formats:
+### **Network Perturbation Mapping**
+- **Velocity-Network Correlations**: Link transcriptional dynamics to network topology
+- **Perturbed Module Discovery**: Identify regulatory modules affected by perturbations
+- **Perturbation Propagation**: Track how perturbations spread through regulatory hierarchies
+- **Cross-Modal Effects**: Analyze perturbation effects on both regulatory and protein networks
 
-**Pickle Format** (Recommended):
-```python
-# Dictionary structure
-{
-    'condition1': {
-        'embeddings': numpy.ndarray,  # Shape: (n_proteins, embedding_dim)
-        'protein_ids': list,          # List of protein identifiers
-        'embedding_dim': int          # Embedding dimensionality
-    },
-    # ...
-}
-```
+### **Drug Response Applications**
+- **Drug Target Identification**: Find regulatory nodes most affected by drug treatment
+- **Mechanism of Action**: Understand how drugs perturb regulatory networks
+- **Dose-Response Analysis**: Quantify network sensitivity to drug concentration
+- **Resistance Mechanisms**: Identify network adaptations leading to drug resistance
 
-**NPZ Format**:
-```python
-# NumPy archive with keys:
-# - 'embeddings': protein embedding matrix
-# - 'protein_ids': protein identifier array
-# - 'contexts': condition labels (optional)
-```
+## Data Requirements
+
+### **For Perturbation Detection**
+- **RNA Velocity Data**: Single-cell RNA-seq with spliced/unspliced counts
+- **SCENIC+ Networks**: Regulatory networks from multi-omic single-cell data
+- **PINNACLE Embeddings**: Context-specific protein embeddings
+- **Condition Labels**: Clear annotation of control vs. perturbed conditions
+
+### **Supported Formats**
+- **AnnData**: `.h5ad` files with velocity layers
+- **SCENIC+ Output**: Pickle files or CSV format
+- **PINNACLE Output**: Pickle files, CSV, or NPZ format
+- **Metadata**: Condition, time point, dose information
 
 ## Examples
 
-### 1. Basic Integration
-
-See [`examples/basic_integration_example.py`](examples/basic_integration_example.py) for a complete standalone example.
-
-### 2. Interactive Analysis
-
-Explore [`examples/interactive_analysis.ipynb`](examples/interactive_analysis.ipynb) for a comprehensive Jupyter notebook tutorial.
-
-### 3. Custom Analysis
-
-```python
-from scenic_pinnacle import (
-    ScenicProcessor, PinnacleProcessor, 
-    NetworkIntegrator, DifferentialAnalyzer
-)
-
-# Custom processing pipeline
-scenic_processor = ScenicProcessor(config={'min_regulon_size': 15})
-pinnacle_processor = PinnacleProcessor(config={'normalize_embeddings': True})
-
-# Load and process data separately
-scenic_networks = scenic_processor.load_data('scenic_data.pkl')
-pinnacle_embeddings = pinnacle_processor.load_data('pinnacle_data.pkl')
-
-# Custom integration
-integrator = NetworkIntegrator(config={'similarity_threshold': 0.6})
-integrated_network = integrator.integrate(
-    scenic_networks['condition1'],
-    pinnacle_embeddings['condition1'],
-    gene_protein_mapping
-)
-
-# Custom differential analysis
-analyzer = DifferentialAnalyzer()
-diff_results = analyzer.analyze(
-    integrated_networks['condition1'],
-    integrated_networks['condition2']
-)
-```
-
-## Configuration
-
-The framework uses hierarchical configuration for fine-tuned control:
-
-```python
-config = {
-    'scenic': {
-        'min_regulon_size': 10,        # Minimum targets per TF
-        'importance_threshold': 0.1,    # Minimum edge importance
-        'min_target_genes': 5          # Minimum targets for analysis
-    },
-    'pinnacle': {
-        'embedding_dim': 256,          # Expected embedding dimension
-        'normalize_embeddings': True,   # L2 normalize embeddings
-        'similarity_threshold': 0.5    # Protein similarity cutoff
-    },
-    'integration': {
-        'similarity_threshold': 0.5,   # Edge creation threshold
-        'min_overlap': 3,              # Minimum gene-protein overlap
-        'use_cross_layer_edges': True  # Connect regulatory and protein layers
-    },
-    'differential': {
-        'pvalue_threshold': 0.05,      # Statistical significance
-        'fold_change_threshold': 1.5,  # Effect size threshold
-        'min_observations': 10         # Minimum data points
-    },
-    'visualization': {
-        'layout_algorithm': 'spring',  # Network layout method
-        'node_size_range': (20, 200),  # Node size scaling
-        'figure_size': (12, 8),        # Default figure dimensions
-        'dpi': 300                     # Figure resolution
-    }
-}
-```
-
-## Architecture
-
-The framework consists of several modular components:
-
-```
-scenic_pinnacle/
-├── core.py              # Main ScenicPinnacleIntegrator class
-├── data_processing.py   # Data loading and preprocessing
-├── network_analysis.py  # Integration and differential analysis
-├── utils.py            # Utilities and identifier mapping
-└── visualization.py    # Plotting and visualization tools
-```
-
-### Core Components
-
-1. **ScenicProcessor**: Handles SCENIC+ regulatory network data
-2. **PinnacleProcessor**: Manages PINNACLE protein embeddings
-3. **NetworkIntegrator**: Combines regulatory and protein networks
-4. **DifferentialAnalyzer**: Performs cross-condition comparisons
-5. **NetworkVisualizer**: Creates publication-ready visualizations
-6. **IdentifierMapper**: Maps between gene and protein identifiers
-
-## API Reference
-
-### Main Classes
-
-#### `ScenicPinnacleIntegrator`
-
-The primary interface for the integration framework.
-
-**Methods:**
-- `load_scenic_data(path, format)`: Load SCENIC+ networks
-- `load_pinnacle_data(path, format)`: Load PINNACLE embeddings
-- `integrate_networks()`: Perform network integration
-- `differential_analysis(cond1, cond2, type)`: Compare conditions
-- `visualize_networks(condition, output_dir)`: Generate plots
-- `export_results(output_dir, formats)`: Save results
-- `run_complete_workflow(...)`: Execute full pipeline
-
-#### `NetworkIntegrator`
-
-Handles the core integration logic.
-
-**Methods:**
-- `integrate(scenic_network, protein_embeddings, mapping)`: Integrate single condition
-- `identify_network_modules(network, method)`: Find network communities
-- `_add_regulatory_edges()`: Add SCENIC+ edges
-- `_add_protein_edges()`: Add PINNACLE edges
-- `_add_cross_layer_edges()`: Connect layers
-
-#### `DifferentialAnalyzer`
-
-Performs statistical comparisons between conditions.
-
-**Methods:**
-- `analyze(network1, network2, type)`: Compare two networks
-- `identify_differential_modules()`: Find changed modules
-- `_analyze_regulatory_differences()`: Compare regulatory edges
-- `_analyze_protein_differences()`: Compare protein similarities
-
-## Advanced Usage
-
-### Custom Identifier Mapping
-
-```python
-from scenic_pinnacle.utils import IdentifierMapper
-
-# Initialize mapper with custom databases
-mapper = IdentifierMapper(config={
-    'mapping_dir': 'custom_mappings/',
-    'use_online_mapping': True,
-    'use_mygene': True,
-    'use_ensembl': True
-})
-
-# Map gene symbols to UniProt IDs
-gene_protein_mapping = mapper.map_genes_to_proteins(['TP53', 'BRCA1', 'MYC'])
-```
-
-### Quality Control
-
-```python
-from scenic_pinnacle.utils import QualityController
-
-qc = QualityController()
-
-# Validate input data
-validated_scenic = qc.validate_scenic_networks(scenic_networks)
-validated_pinnacle = qc.validate_pinnacle_embeddings(pinnacle_embeddings)
-
-# Assess integration quality
-quality_metrics = qc.assess_integration_quality(integrated_networks)
-```
-
-### Custom Visualizations
-
-```python
-from scenic_pinnacle.visualization import NetworkVisualizer
-
-visualizer = NetworkVisualizer(config={
-    'style': {
-        'figure_size': (15, 10),
-        'node_size_range': (30, 300),
-        'color_palette': 'Set2'
-    }
-})
-
-# Create custom network plot
-visualizer.plot_network(
-    integrated_networks['condition1'],
-    output_path='custom_network.png',
-    layout='kamada_kawai',
-    color_by='node_type',
-    size_by='degree',
-    interactive=True
-)
-
-# Plot protein embeddings
-visualizer.plot_embeddings(
-    integrated_networks['condition1'],
-    output_path='embeddings_umap.png',
-    method='umap',
-    color_by='node_type'
-)
-```
-
-## Performance Optimization
-
-### Memory Management
-
-For large datasets, consider these optimization strategies:
-
-```python
-# Process conditions separately to reduce memory usage
-config['processing'] = {
-    'batch_size': 1000,
-    'use_sparse_matrices': True,
-    'memory_efficient': True
-}
-
-# Use data generators for very large datasets
-def data_generator(file_paths):
-    for path in file_paths:
-        yield load_data(path)
-
-# Process in chunks
-for chunk in data_generator(file_paths):
-    results = integrator.process_chunk(chunk)
-```
-
-### Parallel Processing
-
-```python
-from multiprocessing import Pool
-from functools import partial
-
-# Parallel network integration
-def integrate_condition(condition, scenic_data, pinnacle_data, config):
-    integrator = NetworkIntegrator(config)
-    return integrator.integrate(scenic_data[condition], pinnacle_data[condition])
-
-# Use multiprocessing for multiple conditions
-with Pool(processes=4) as pool:
-    integrate_func = partial(integrate_condition, 
-                           scenic_data=scenic_networks,
-                           pinnacle_data=pinnacle_embeddings,
-                           config=config)
-    
-    results = pool.map(integrate_func, conditions)
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Memory Errors**:
-   - Reduce batch size in configuration
-   - Use sparse matrix representations
-   - Process conditions separately
-
-2. **Identifier Mapping Failures**:
-   - Check gene/protein identifier formats
-   - Verify online database connectivity
-   - Use custom mapping files
-
-3. **Empty Integration Results**:
-   - Lower similarity thresholds
-   - Check data format compatibility
-   - Verify identifier overlap between datasets
-
-4. **Visualization Errors**:
-   - Install optional visualization dependencies
-   - Check output directory permissions
-   - Reduce network size for complex layouts
-
-### Debug Mode
-
-Enable detailed logging for troubleshooting:
-
-```python
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger('scenic_pinnacle')
-
-# Run with detailed logging
-integrator = ScenicPinnacleIntegrator(config=config)
-# ... analysis code ...
-```
+See the `examples/` directory for comprehensive tutorials:
+
+- `velocity_drug_response_example.py`: Complete drug response analysis workflow
+- `basic_integration_example.py`: Standard BRIDGE integration
+- `enhanced_bridge_example.py`: Advanced features with scVI and optimal transport
 
 ## Contributing
 
-We welcome contributions to improve the framework! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-```bash
-# Clone and install in development mode
-git clone https://github.com/manus-ai/scenic-pinnacle-integration.git
-cd scenic-pinnacle-integration
-pip install -e ".[dev]"
-
-# Run tests
-pytest tests/
-
-# Code formatting
-black src/
-flake8 src/
-
-# Type checking
-mypy src/
-```
-
-### Submitting Issues
-
-Please use our [Issue Template](.github/ISSUE_TEMPLATE.md) when reporting bugs or requesting features.
-
-## Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@software{scenic_pinnacle_integration,
-  title={SCENIC+ and PINNACLE Integration Framework},
-  author={Manus AI},
-  year={2025},
-  url={https://github.com/manus-ai/scenic-pinnacle-integration},
-  version={1.0.0}
-}
-```
-
-Also cite the original methods:
-
-- **SCENIC+**: Bravo González-Blas, C. et al. SCENIC+: single-cell multiomic inference of enhancers and gene regulatory networks. Nat Methods (2023).
-- **PINNACLE**: Zitnik, M. et al. Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities. Inf Fusion 50, 71-91 (2019).
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Citation
+
+If you use BRIDGE in your research, please cite:
+
+```bibtex
+@software{bridge2025,
+  title={BRIDGE: Biological Regulatory Integration for Dynamic Gene Expression},
+  author={Manus AI},
+  year={2025},
+  url={https://github.com/manus-ai/bridge}
+}
+```
+
 ## Support
 
-- **Documentation**: [Read the Docs](https://scenic-pinnacle-integration.readthedocs.io/)
-- **Issues**: [GitHub Issues](https://github.com/manus-ai/scenic-pinnacle-integration/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/manus-ai/scenic-pinnacle-integration/discussions)
-- **Email**: contact@manus.ai
+- **Documentation**: [https://bridge-omics.readthedocs.io/](https://bridge-omics.readthedocs.io/)
+- **Issues**: [GitHub Issues](https://github.com/manus-ai/bridge/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/manus-ai/bridge/discussions)
 
-## Acknowledgments
 
-- The SCENIC+ team for developing the enhancer-driven regulatory network inference method
-- The PINNACLE team for creating context-specific protein embedding approaches
-- The single-cell genomics community for valuable feedback and testing
-- Contributors and users who help improve this framework
-
----
-
-**Developed by [Manus AI](https://manus.ai) - Advancing AI for Scientific Discovery**
+<img width="462" height="642" alt="image" src="https://github.com/user-attachments/assets/8017d5b8-193d-48dd-b839-73aa3240e3f6" />
 
