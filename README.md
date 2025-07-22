@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Documentation Status](https://readthedocs.org/projects/bridge-omics/badge/?version=latest)](https://bridge-omics.readthedocs.io/en/latest/?badge=latest)
 
-## üéØ **Core Innovation: Velocity-Guided Perturbation Detection**
+## **Core Innovation: Velocity-Guided Perturbation Detection**
 
 BRIDGE leverages **RNA velocity** (velocyto/scVelo) to detect network perturbations by analyzing splicing dynamics and transcriptional kinetics. This enables unprecedented sensitivity in identifying how drugs, treatments, or experimental perturbations alter regulatory networks at the molecular level.
 
@@ -26,7 +26,7 @@ This framework combines three powerful approaches for comprehensive perturbation
 
 **Unique Capability**: By integrating RNA velocity with network analysis, BRIDGE can pinpoint which regulatory networks are perturbed by drugs or experimental conditions through analysis of splicing short events, providing early detection of perturbations before they manifest in steady-state expression changes.
 
-## üöÄ **Perturbation Detection Capabilities**
+## **Perturbation Detection Capabilities**
 
 ### **RNA Velocity-Driven Perturbation Analysis**
 - **Splicing Dynamics Monitoring**: Track unspliced/spliced RNA ratios to detect transcriptional perturbations
@@ -55,7 +55,7 @@ This framework combines three powerful approaches for comprehensive perturbation
 - **Cross-Condition Alignment**: Align networks across perturbation conditions for comparison
 - **Perturbation Quantification**: Measure perturbation strength using optimal transport metrics
 
-## üéØ **Applications: Perturbation-Driven Discovery**
+## **Applications: Perturbation-Driven Discovery**
 
 ### **Drug Discovery & Development**
 - **Early Drug Response Detection**: Identify drug effects through splicing dynamics before expression changes
@@ -77,26 +77,26 @@ This framework combines three powerful approaches for comprehensive perturbation
 - **Personalized Treatment**: Tailor therapies based on individual network perturbation profiles
 - **Resistance Prediction**: Forecast treatment resistance through network perturbation analysis
 
-### üî¨ **Technical Features**
+### **Technical Features**
 - Support for multiple data formats (pickle, CSV, HDF5, NPZ)
 - Automated identifier mapping between genes and proteins
 - Quality control and validation at each integration step
 
-### üìä **Perturbation Analysis & Quantification**
+### **Perturbation Analysis & Quantification**
 - **Velocity-Based Perturbation Scoring**: Quantify perturbation strength using RNA velocity metrics
 - **Splicing Event Statistical Testing**: Statistical analysis of unspliced/spliced ratio changes
 - **Network Perturbation Significance**: Test for significant changes in regulatory network structure
 - **Temporal Perturbation Profiling**: Track perturbation dynamics over time courses
 - **Multi-Modal Perturbation Integration**: Combine regulatory and protein network perturbation signals
 
-### üé® **Perturbation Visualization**
+### *Perturbation Visualization**
 - **Velocity Vector Plots**: Visualize RNA velocity vectors overlaid on network structures
 - **Perturbation Heatmaps**: Show perturbation strength across genes and conditions
 - **Network Perturbation Graphs**: Highlight perturbed edges and nodes in network visualizations
 - **Temporal Perturbation Trajectories**: Track perturbation propagation through time
 - **Splicing Dynamics Plots**: Visualize unspliced/spliced ratios and velocity magnitudes
 
-### ‚ö° **Scalable Architecture**
+### **Scalable Architecture**
 - Modular design for easy extension and customization
 - Efficient processing of large-scale single-cell datasets
 - Parallel processing capabilities for multiple conditions
